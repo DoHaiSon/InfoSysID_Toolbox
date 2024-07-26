@@ -18,17 +18,17 @@
 }
 \\ \\
 \State Load ray-tracing simulation data from `.mat' file: 
-$$
-\bm{\theta}, \mathbf{X} \leftarrow \mathrm{Load\_data(B1, B2,\cdots,B8})
-$$
+$
+\bm{\theta}, \mathbf{X} \leftarrow \mathrm{Load\_data(B1, B2,\cdots,B8)}
+$
 \State Using Inf\_FINE to estimate the CRB: 
-$$
+$
 \mathbf{BCRB} \leftarrow \mathrm{Inf\_FINE}(\bm{\theta}, \mathbf{X}, epochs, lr)
-$$
+$
 \State Compute CRB on x and y axes: 
-$$
+$
 \mathrm{BCRB_x}, \mathrm{BCRB_y} \leftarrow \mathrm{diag}(\mathbf{BCRB})
-$$
+$
 \\
 \State \Return Err $\leftarrow \mathrm{BCRB_x}, \mathrm{BCRB_y}$
 \end{algorithmic}
